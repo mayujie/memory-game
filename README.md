@@ -1,7 +1,7 @@
 # Memory Game Project
 
 ## Purpose of Project:
-This project "Memory Game" is made for [Udacity](http://udacity.com/) 
+This project "Memory Game" is made for [Udacity](http://udacity.com/).
 
 ## How to start the game
 

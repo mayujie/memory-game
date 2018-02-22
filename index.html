@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Matching Game</title>
+      <meta name="description" content="">
+      <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+      <link rel="stylesheet" href="css/app.css">
+      <link rel="icon" href="favicon.webp" type="image/x-icon"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   </head>
+
+   <body>
+
+      <div class="fade-bg fade" style="display:none;">
+         <div class="message"></div>
+      </div>
+
+      <div class="container">
+
+         <div class="top-mobile">
+            <span><strong>Matching Game</strong></span>
+            <div class="stars">
+               <div class="stargolden" style="width:100%;">&nbsp;</div>
+            </div>
+         </div>
+
+         <div class="top-desktop">
+            <header>
+               <h1>Matching Game </h1>
+               <div class="stars">
+                  <div class="stargolden" style="width:100%;">&nbsp;</div>
+               </div>
+            </header>
+         </div>
+
+         <div class="progress" style="width:300px;">
+            <span class="blink" title="">
+            Waiting for click
+            </span>
+            <div class="progress red" style="width:0px;"></div>
+         </div>
+
+         <section class="score-panel">
+            <span class="moves">0</span> Moves
+            <div class="menu">
+               <i>&#9776;</i>
+            </div>
+         </section>
+
+         <ul class="deck">
+         </ul>
+
+      </div>
+      <script src="https://cdn.jsdelivr.net/sweetalert2/3.0.3/sweetalert2.min.js"></script>
+      <script src="js/app.js"></script>
+   </body>
+</html>
