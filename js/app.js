@@ -181,7 +181,7 @@ let clickCard = function (dif) {
 			}, 600);
 		}
 
-
+		// Gives out a star rating of 1 star to 3. (1.6 stars)
 		const mistakesMade = movesMade - 8;
 		if (mistakesMade > 0 && mistakesMade <= 22) {
 			stars = (33 - mistakesMade) * 3;
