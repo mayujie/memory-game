@@ -5,16 +5,13 @@ This project "Memory Game" is made for [Udacity](http://udacity.com/).
 
 ## How to start the game
 
-You can play this game [here](http://lonniedesign.com/udacity/memory-game/) or download/clone the repo and open "index.html"
+You can play this game [here](http://lonniedesign.com/udacity/memory-game/) or download/clone the repo open "index.html"
 
 ## How to Play
 
 This is a remake of the classic game "Memory" and it's very straight forward, once you have choosen the difficult you want the game will provide you with sixteen cards (eight pairs with different sympols). Pair them together to win the game!
 
-## Difficults in the Game
-
-The harder difficulty you have the lower score you get.
-Try to get as low score as possible!
+## difficult in the Game
 
 * Very Hardcore = **30 seconds** to complete the deck.
 * Hardcore = **1 minute** to complete the deck.
