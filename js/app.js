@@ -73,7 +73,7 @@ function startGame(dif, newgame) {
 		diffs = '';
 		for (let difficult of diffucalts) {
 			difficult = difficult.split(":");
-			diffs += `<button id="clickfac" class="diff ${difficult[1]}">${difficult[0]}</button>`;
+			diffs += `<button id="clickfac" class="diff ${difficult[1]} ripple">${difficult[0]}</button>`;
 		}
 
 
@@ -218,7 +218,6 @@ function gameWon(dif, movesMade, time, inRow, mistakes) {
 
 	let text = `<h1>Game Won!</h1>	
 	<div class="stars"><div class="stargolden" style="width:${stars}%;"> </div></div>
-
 	<p>You finished the game in <strong>${convertms(mstime)}</strong> with <strong>${mistakes} mistakes</strong>!<br /><br />
 	<strong>Score: ${score} <br /></strong>
 	--------<br />
@@ -226,7 +225,7 @@ function gameWon(dif, movesMade, time, inRow, mistakes) {
 	Moves = ${mistakes}<br />
 	${(inRow)?"Found In Row = -"+inRow:""}
 	
-	</p><p><button class="newgame">New Game</button></p>`;
+	</p><p><button class="newgame ripple">New Game</button></p>`;
 
 	deck.css('background', `linear-gradient(170deg, #5C4 0%, #382 100%)`);
 
@@ -243,9 +242,9 @@ function gameMenu(dif) {
 	timerOn = false;
 
 	let text = `<h1>Game Paused!</h1><hr><p>
-	<button class="resume">Resume Game</button>
-	<button class="new">New Game</button>
-	<button class="restart">Restart Game</button>
+	<button class="resume ripple">Resume Game</button>
+	<button class="new ripple">New Game</button>
+	<button class="restart ripple">Restart Game</button>
 	</p>`;
 
 	deck.css('background', `linear-gradient(160deg, #999 0%, #666 100%)`);
@@ -288,7 +287,7 @@ function gameOver(dif) {
 		gameText = [301, 'Is it still too hard for you? are you a n00b?'];
 	}
 
-	let text = `<h1>Game Over!</h1><hr><p><button class="diff ${gameText[0]}">${gameText[1]}</button></p><p><button class="new">New Game</button></p>`;
+	let text = `<h1>Game Over!</h1><hr><p><button class="diff ${gameText[0]} ripple">${gameText[1]}</button></p><p><button class="new ripple">New Game</button> <button class="restart ripple">Restart Game</button></p>`;
 
 	deck.css('background', `linear-gradient(160deg, #C00 0%, #C77 100%)`);
 
@@ -300,14 +299,21 @@ function gameOver(dif) {
 		playerDiff = playerDiff.split(" ");
 		dif = playerDiff[1];
 		restartGame(dif);
-		deck.css('background', `linear-gradient(160deg, #ABD 0%, #89D 100%)`);
-		$(".fade-bg").fadeToggle("slow", "linear");
 	});
 
 	$('.new').click(function () {
 		startGame('0', 'new');
 	});
 
+	$('.restart').click(function () {
+		restartGame(dif, 'new');
+	});	
+
+	$('.diff, .restart').click(function () {
+		$(".fade-bg").fadeToggle("slow", "linear");
+		deck.css('background', `linear-gradient(160deg, #ABD 0%, #89D 100%)`);
+	});
+	
 }
 
 
