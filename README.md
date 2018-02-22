@@ -11,7 +11,10 @@ You can play this game [here](http://lonniedesign.com/udacity/memory-game/) or d
 
 This is a remake of the classic game "Memory" and it's very straight forward, once you have choosen the difficult you want the game will provide you with sixteen cards (eight pairs with different sympols). Pair them together to win the game!
 
-## difficult in the Game
+## Difficults in the Game
+
+The harder difficulty you have the lower score you get.
+Try to get as low score as possible!
 
 * Very Hardcore = **30 seconds** to complete the deck.
 * Hardcore = **1 minute** to complete the deck.
