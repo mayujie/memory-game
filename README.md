@@ -5,7 +5,7 @@ This project "Memory Game" is made for [Udacity](http://udacity.com/).
 
 ## How to start the game
 
-You can play this game [here](http://lonniedesign.com/udacity/memory-game/) or download/clone the repo open "index.html"
+You can play this game [here](http://lonniedesign.com/udacity/memory-game/) or download/clone the repo and open "index.html"
 
 ## How to Play
 
