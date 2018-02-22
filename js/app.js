@@ -183,10 +183,11 @@ let clickCard = function (dif) {
 
 
 		const mistakesMade = movesMade - 8;
-		if (mistakesMade > 0 && mistakesMade <= 33) {
+		if (mistakesMade > 0 && mistakesMade <= 22) {
 			stars = (33 - mistakesMade) * 3;
 		}
-
+		
+		const countStars = stars / 33;
 
 		// Player has found all the cards!
 		if (founded === 8) {
@@ -194,7 +195,7 @@ let clickCard = function (dif) {
 			timer.html(`<strong>CONGRATZ!</strong>`);
 
 			setTimeout(function () {
-				gameWon(dif, movesMade, $(".blink").attr('title'), inRow, mistakesMade);
+				gameWon(dif, movesMade, $(".blink").attr('title'), $(".stars").attr('title'), inRow, mistakesMade);
 				return;
 			}, 500);
 		}
@@ -203,26 +204,29 @@ let clickCard = function (dif) {
 		// Update Moves and Starts
 		moves.html(movesMade);
 		$('.stargolden').css('width', `${stars}%`);
+		$(".stars").attr("title", countStars.toFixed(1));
 
 
 	});
 };
 
-function gameWon(dif, movesMade, time, inRow, mistakes) {
+function gameWon(dif, movesMade, time, starsCount, inRow, mistakes) {
 	mistakes = Math.max(0, mistakes);
 	stars = (33 - mistakes) * 3;
 
 	let mstime = time * 1000;
+	let timeScore = time * dif;
 
-	const score = time * dif + mistakes - inRow;
+	const score = timeScore + mistakes - inRow - starsCount;
 
 	let text = `<h1>Game Won!</h1>	
 	<div class="stars"><div class="stargolden" style="width:${stars}%;"> </div></div>
 	<p>You finished the game in <strong>${convertms(mstime)}</strong> with <strong>${mistakes} mistakes</strong>!<br /><br />
-	<strong>Score: ${score} <br /></strong>
+	<strong>Score: ${score.toFixed(2)} <br /></strong>
 	--------<br />
-	Time = ${time * dif}<br />
-	Moves = ${mistakes}<br />
+	Time = ${timeScore.toFixed(2)}<br />
+	Mistakes = ${mistakes}<br />
+	Stars = -${starsCount}<br />
 	${(inRow)?"Found In Row = -"+inRow:""}
 	
 	</p><p><button class="newgame ripple">New Game</button></p>`;
