@@ -4,6 +4,7 @@
 This project "Memory Game" is made for [Udacity](http://udacity.com/).
 
 ## How to start the game
+[Start the Game](https://mayujie.github.io/memory-game/).
 You can play this game [here](http://lonniedesign.com/udacity/memory-game/) or download/clone the repo and open "index.html"
 - Online version: https://cdn.rawgit.com/mayujie/memory-game/9c249bc3/index.html
 ## How to Play
